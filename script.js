@@ -32,9 +32,16 @@ function generateGradientImage(ctx, color1, color2, width, height) {
 
 document.getElementById("generateBtn").addEventListener("click", () => {
   const fileInput = document.getElementById("fileInput");
+  const width = document.getElementById("width");
+  const height = document.getElementById("height");
   const file = fileInput.files[0];
   if (!file) {
     alert("Please upload a file first.");
+    return;
+  }
+
+  if (width.value <= 0 || height.value <= 0) {
+    alert("Please enter width and height.");
     return;
   }
 
@@ -55,6 +62,8 @@ document.getElementById("generateBtn").addEventListener("click", () => {
     );
 
     const canvas = document.getElementById("gradientCanvas");
+    canvas.width = width.value;
+    canvas.height = height.value;
     const ctx = canvas.getContext("2d");
     generateGradientImage(ctx, color1, color2, canvas.width, canvas.height);
 

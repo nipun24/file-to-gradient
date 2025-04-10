@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>Gradient Generator from Markdown File</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -21,7 +22,42 @@
           class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
           type="file"
           id="fileInput"
+          required
         />
+      </div>
+      <div class="mb-5 grid grid-cols-2 gap-2">
+        <div>
+          <label
+            for="width"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Width</label
+          >
+          <input
+            type="number"
+            id="width"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder=""
+            value="1200"
+            min="1"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="height"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Height</label
+          >
+          <input
+            type="number"
+            id="height"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder=""
+            value="600"
+            min="1"
+            required
+          />
+        </div>
       </div>
 
       <div class="mb-5">
